@@ -283,6 +283,33 @@
     </div>
 
     <script>
+
+const images = [
+    "images/WhatsApp Image 2024-12-19 at 11.06.56 (2).jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.06.56 (1).jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.00.22.jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.06.56 (1).jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.06.56 (2).jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.06.57 (1).jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.06.57 (2).jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.06.57 (3).jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.06.57.jpeg",
+    "images/WhatsApp Image 2024-12-19 at 11.10.12 (1).jpeg"
+];
+
+let currentImageIndex = 0; // Índice da imagem atual
+
+// Função para trocar a imagem
+function changeImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length; // Ciclo através das imagens
+    const imageElement = document.querySelector('.image-card img');
+    imageElement.src = images[currentImageIndex];
+}
+
+// Configurar intervalo para trocar a imagem a cada 5 segundos (5000 ms)
+setInterval(changeImage, 3000);
+
+
 const loveButton = document.getElementById('loveButton');
 const hearts = ["❤️", "💖", "💘", "💝", "💓"];
 let heartIndex = 0;
